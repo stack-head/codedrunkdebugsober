@@ -1,0 +1,24 @@
+version: '3.7'
+services:
+  codedrunk_xero_base:
+    image: stackhead/codedrunk_xero_base
+    build:
+      context: .
+      dockerfile: virtualization/demo_xero_base.Dockerfile
+
+  codedrunk_xero_uniclient:
+    image: stackhead/codedrunk_xero_uniclient
+    build:
+      context: .
+      dockerfile: virtualization/demo_xero_uniclient.Dockerfile
+    container_name: codedrunk_xero_uniclient
+    ports:
+      - "5550:5550"
+
+  codedrunk_xero_uniworker:
+    image: stackhead/codedrunk_xero_uniworker
+    build:
+      context: .
+      dockerfile: virtualization/demo_xero_uniworker.Dockerfile
+    container_name: codedrunk_xero_uniworker
+

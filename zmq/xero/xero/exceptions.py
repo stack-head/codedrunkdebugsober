@@ -1,0 +1,3 @@
+
+class LostRemoteError(RuntimeError):
+    pass

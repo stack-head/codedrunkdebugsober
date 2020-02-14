@@ -1,0 +1,8 @@
+msgpack>=0.6.2
+
+# Note: pymzq and tornado's relationship has been changing in recent versions
+# pyzmq continues to add functionality while managing updates that have independently
+# been made in tornado.  I've found these versions to work together, but
+# future dependency updates may well cause breaks
+pyzmq>=14.7.0
+tornado>=6.0.3

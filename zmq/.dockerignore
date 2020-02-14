@@ -1,0 +1,22 @@
+
+# Ignore python build artifact folders.
+**/build
+**/dist
+**/__pycache__
+
+**/.cache
+**/.eggs
+**/*.egg-info
+**/*.pyc
+
+# Unit test/code analysis artifacts
+**/.coverage
+**/.idea
+**/.mypy_cache
+**/*.png
+**/*.prof
+**/.pytest_cache
+**/*.xml
+
+# Ignore the scripts to build/run docker images
+./support

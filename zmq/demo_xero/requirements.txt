@@ -1,0 +1,7 @@
+munch
+pykka
+python-dateutil
+coloredlogs>=5.2
+
+# Custom modules
+xero
