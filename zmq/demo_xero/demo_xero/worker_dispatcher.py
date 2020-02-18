@@ -4,6 +4,7 @@ import pykka
 
 logger = logging.getLogger(__name__)
 
+
 def ping():
     return "pong"
 
@@ -18,12 +19,11 @@ def return_none():
     return None
 
 
-def take_too_long():
-    sleep(10)
-    return True
-
-
 class WorkerDispatcher(object):
+    """
+    This class acts as a wrapper to make it easy to get a work "actor" to service the actual call, this is
+    a useful way to handle long running calls that might need to run in a non-blocking method.
+    """
 
     def __init__(self, send_reply_cb):
         self._send_reply_cb = send_reply_cb
@@ -48,6 +48,9 @@ class WorkerDispatcher(object):
 
 
 class UniWorkerActor(pykka.ThreadingActor):
+    """
+    Threading Actor class that is meant to simulate long-running actions.
+    """
 
     def __init__(self):
         super(UniWorkerActor, self).__init__()

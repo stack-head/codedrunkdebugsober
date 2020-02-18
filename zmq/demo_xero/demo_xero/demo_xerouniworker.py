@@ -11,7 +11,7 @@ from xero.uni.uniworker import UniWorker
 
 # include all modules from modules directory
 from demo_xero.setup_logging import configure_logging
-from demo_xero.worker_dispatcher import WorkerDispatcher, ping, compare, return_none, take_too_long
+from demo_xero.worker_dispatcher import WorkerDispatcher, ping, compare, return_none
 
 try:
     from typing import Any, Dict, List
@@ -31,7 +31,6 @@ class TrivialUniWorker(UniWorker):
             'ping': ping,
             'compare': compare,
             'return_none': return_none,
-            'take_too_long': take_too_long,
             'slow_succeed': self._dispatcher.work_time_succeed,
             'slow_fail': self._dispatcher.work_time_fail
         }

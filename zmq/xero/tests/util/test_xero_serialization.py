@@ -51,12 +51,6 @@ class TestXeroSerializer(unittest.TestCase):
         assert type(rebuilt_string) is str
         assert rebuilt_string == simple_string
 
-#        unicode_string = u'this_should_be_unicode'
-#        packed_unicode_string = msgpack.packb(unicode_string, default=XeroSerializer.encoder)
-#        rebuilt_unicode_string = msgpack.unpackb(packed_unicode_string, object_hook=XeroSerializer.decoder, raw=False)
-#        assert type(rebuilt_unicode_string) is str
-#        assert rebuilt_unicode_string == unicode_string
-
 
 def get_datetime_now():
     # type: () -> datetime

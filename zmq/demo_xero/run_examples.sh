@@ -12,5 +12,4 @@ set -o pipefail
 ./bin/demo_xerouniclient tcp://127.0.0.1:5550 slow_succeed --args 5 --timeout 20
 ./bin/demo_xerouniclient tcp://127.0.0.1:5550 slow_fail --args 5 --timeout 20
 
-#./bin/demo_xerouniclient tcp://127.0.0.1:5550 cut_video --args '"table_cam.mp4", "./output/bleh.mp4", "00:00:00", "00:02:00"'
 

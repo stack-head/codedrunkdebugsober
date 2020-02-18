@@ -31,8 +31,8 @@ class ConsoleUniWorker(UniWorker):
                 raise Exception('method {} not found'.format(name))
 
         except BaseException as e:
-            logger.warn("exception in job '{}'".format(name))
-            logger.warn(traceback.format_exc())
+            logger.warning("exception in job '{}'".format(name))
+            logger.warning(traceback.format_exc())
             ex = {
                 'class': type(e).__name__,
                 'message': format(e),
