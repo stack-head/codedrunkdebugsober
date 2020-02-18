@@ -8,4 +8,4 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build pyzmq demo dockerfiles
-      run: (cd zmq && run_demo_xero_in_docker_env.sh)
+      run: (cd zmq && ./run_demo_xero_in_docker_env.sh)
